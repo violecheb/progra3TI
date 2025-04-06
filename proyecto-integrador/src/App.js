@@ -14,7 +14,6 @@ function App() {
     <Switch> 
       <Route path = "/" exact = {true} component = {Home}/>
       <Route path = "/detalle/:id" component = {Detalle}/>
-      <Route path = "/favoritos" component = {Favoritos}  />
       <Route component= {Error404} />
     </Switch>
   );
