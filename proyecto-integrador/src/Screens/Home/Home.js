@@ -8,7 +8,7 @@ function Home(){
         <SearchForms/>
         <MoviesList header= "Top Rated Movies" movies = {fakeTop}/>
         <MoviesList header= "Upcoming Movies" movies = {fakeUpcoming}/>
-        </main>
+       </main>
     )
 }
 
