@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-//todavia no se como hacer para lo de favoritos
 
 class MovieCard extends Component{
     constructor(props){
@@ -24,18 +23,18 @@ class MovieCard extends Component{
             esFavorito: !this.state.esFavorito //guarda el contrario
         })
     }
-
     
     render(){
        console.log()
        const movie = this.state.valor;
        return(
         <>
+        <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt={movie.title}/>
         <h1>{movie.title}</h1>
         {this.state.mostrarContenido === true ? 
-        <p>{movie.detail}</p> : ""}
+        <p>{movie.overview}</p> : ""}
         <button onClick={()=> this.ocultar()}>Ver descripcion</button>
-        <Link to={`/detail/id/${movie.id}`}>Ir a detalle</Link>
+        <Link to={`/detalle/${movie.id}`}>Ir a detalle</Link>
         <button onClick={()=> this.favear()}>{this.state.esFavorito ? "❤️" : "🤍"}</button>
         </>
         
@@ -44,5 +43,3 @@ class MovieCard extends Component{
 }
 
 export default MovieCard;
-
-//la imagen no la ponemos hasta tener de la api
