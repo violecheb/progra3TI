@@ -7,6 +7,7 @@ import Header from "./components/Header/Header"
 import Error404 from "./screens/Error/Error"
 import Home from "./screens/Home/Home"
 import Footer from "./components/Footer/Footer";
+import MasPopulares from "./screens/MasPopulares/MasPopulares";
 // Aca va la importación de los screens cuando los tengamos
 
 
@@ -17,6 +18,7 @@ function App() {
     <Switch> 
       <Route path = "/" exact = {true} component = {Home}/>
       <Route path = "/detalle/:id" component = {Detalle}/>
+      <Route path="/topRated" component= {MasPopulares} />
       <Route component= {Error404} />
     </Switch>
     <Footer />
