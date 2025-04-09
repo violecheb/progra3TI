@@ -1,6 +1,5 @@
 import React from "react";
 import MovieCard from "../MovieCard/MovieCard";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function MoviesList (props){
     console.log(props)
@@ -10,7 +9,6 @@ function MoviesList (props){
             {props.movies.map(((movie, idx) => 
            <MovieCard key={`${movie}-${idx}`} movie = {movie}/>
             ))}
-        <Link to={props.path}>Ver todas</Link>
         </div>
     )
 }
