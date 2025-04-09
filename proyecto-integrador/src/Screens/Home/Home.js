@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import MoviesList from "../../components/MoviesList/MoviesList";
-import Loader from "../../components/Loader/Loader";
+import MoviesList from "../../Components/MoviesList/MoviesList";
+import Loader from "../../Components/Loader/Loader";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import SearchForm from "../../components/SearchForm/SearchForm";
+import SearchForm from "../../Components/SearchForm/SearchForm";
 
 class Home extends Component{
     constructor(props){

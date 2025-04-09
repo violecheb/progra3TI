@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import MoviesList from "../../components/MoviesList/MoviesList";
-import Loader from "../../components/Loader/Loader";
-import Filtro from "../../components/Filtro/Filtro";
+import MoviesList from "../../Components/MoviesList/MoviesList";
+import Loader from "../../Components/Loader/Loader";
+import Filtro from "../../Components/Filtro/Filtro";
 
 class Upcoming extends Component{
     constructor(props){

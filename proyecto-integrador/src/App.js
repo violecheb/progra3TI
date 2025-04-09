@@ -1,14 +1,14 @@
 import React from "react";
 import {Switch,Route} from 'react-router-dom'
 //import Favoritos from "./Screens/Favoritos/Favoritos";
-import Detalle from "./screens/Detalle/Detalle"
-import Header from "./components/Header/Header"
-import Error404 from "./screens/Error/Error"
-import Home from "./screens/Home/Home"
-import Footer from "./components/Footer/Footer";
-import TopRated from "./screens/TopRated/TopRated";
-import SearchResults from "./screens/SearchResults/SearchResults";
-import Upcoming from "./screens/Upcoming/Upcoming";
+import Detalle from "./Screens/Detalle/Detalle"
+import Header from "./Components/Header/Header"
+import Error404 from "./Screens/Error/Error"
+import Home from "./Screens/Home/Home"
+import Footer from "./Components/Footer/Footer";
+import TopRated from "./Screens/TopRated/TopRated";
+import SearchResults from "./Screens/SearchResults/SearchResults";
+import Upcoming from "./Screens/Upcoming/Upcoming";
 // Aca va la importación de los screens cuando los tengamos
 
 
