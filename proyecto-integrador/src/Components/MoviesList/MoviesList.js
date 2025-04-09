@@ -7,7 +7,7 @@ function MoviesList (props){
         <div className="seccion-movies">
             <h1 className="header-seccion">{props.header}</h1>
             {props.movies.map(((movie, idx) => 
-           <MovieCard key={`${movie}-${idx}`} movie = {movie}/>
+           <MovieCard key={`${movie.id}-${idx}`} movie = {movie}/>
             ))}
         </div>
     )
