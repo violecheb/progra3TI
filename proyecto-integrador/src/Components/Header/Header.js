@@ -1,5 +1,5 @@
 import React from "react";
-import OpcionesMenu from "./OpcionesMenu";
+import OpcionesMenu from "../OpcionesMenu/OpcionesMenu";
 // import "./styles.css";
 
 function Header(){

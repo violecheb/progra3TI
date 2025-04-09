@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import SearchForm from "../../Components/SearchForm/SearchForm";
-import Loader from "../../Components/Loader/Loader";
-import MoviesList from "../../Components/MoviesList/MoviesList";
+import SearchForm from "../../components/SearchForm/SearchForm";
+import Loader from "../../components/Loader/Loader";
+import MoviesList from "../../components/MoviesList/MoviesList";
 
 class SearchResults extends Component{
     constructor(props){
