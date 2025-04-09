@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import './Detalle.css'
+import Loader from "../../Components/Loader/Loader";
 
 class Detalle extends Component{
     constructor(props){
         super(props)
         this.state ={
-            movie : null,
-            Cargando: true
+            movie : []
         }
     }
     componentDidMount(){
@@ -15,8 +15,7 @@ class Detalle extends Component{
         .then((response) => response.json())
         .then ((data) => {
             this.setState({
-                movie:data,
-                Cargando: false
+                movie:data
             })
         })
         .catch((error) => {
@@ -25,9 +24,11 @@ class Detalle extends Component{
         
     }
     render(){
-            let {movie, Cargando } = this.state;
-            if (Cargando ) return <h2> Cargando...</h2>
+            let movie = this.state.movie
         return(
+            <>
+            {this.state.movie.length == 0?
+                  <Loader/>:
             <div className="detalle-container"> 
                 <h2>Titulo: {movie.title}</h2>
                 <img src = {`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}/>
@@ -35,8 +36,13 @@ class Detalle extends Component{
                 <p>Fecha de estreno: {movie.release_date}</p>
                 <p>Duración: {movie.runtime} minutos </p>
                 <p>Sinopsis: {movie.overview}</p>
-                <p>Genero: {movie.genres.map((genre) => genre.name).join(', ')}</p>
+                <p>Genero/s: </p>
+                <ul>
+                    {movie.genres.map((genre, i) => <li key = {`${genre.name}-${i}`}> {genre.name}</li>)}
+                </ul>
             </div>
+                }  
+            </>
         )
 
     }
