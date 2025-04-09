@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import './Detalle.css'
 
 class Detalle extends Component{
     constructor(props){
@@ -28,12 +28,12 @@ class Detalle extends Component{
             let {movie, Cargando } = this.state;
             if (Cargando ) return <h2> Cargando...</h2>
         return(
-            <div> 
+            <div className="detalle-container"> 
                 <h2>Titulo: {movie.title}</h2>
                 <img src = {`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}/>
-                <p>Calificación:{movie.vote_average}</p>
-                <p>Fecha de estreno:{movie.release_date}</p>
-                <p>Duración minutos:{movie.runtime} </p>
+                <p>Calificación: {movie.vote_average}</p>
+                <p>Fecha de estreno: {movie.release_date}</p>
+                <p>Duración: {movie.runtime} minutos </p>
                 <p>Sinopsis: {movie.overview}</p>
                 <p>Genero: {movie.genres.map((genre) => genre.name).join(', ')}</p>
             </div>
