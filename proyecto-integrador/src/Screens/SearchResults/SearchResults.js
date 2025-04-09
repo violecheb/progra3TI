@@ -3,7 +3,7 @@ import React from "react";
 function SearchResults(){
     return (
         <div> 
-            <h2> soy los resultados </h2>
+            <h2> soy los resultados delfi</h2>
         </div>
     )
 }

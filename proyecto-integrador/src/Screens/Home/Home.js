@@ -11,7 +11,6 @@ class Home extends Component{
         {topRated: [],
         upcoming: []
         }
-
     }
 
     componentDidMount(){
