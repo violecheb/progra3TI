@@ -3,22 +3,25 @@ import MoviesList from "../../Components/MoviesList/MoviesList";
 import Loader from "../../Components/Loader/Loader";
 import Filtro from "../../Components/Filtro/Filtro";
 
+
 class TopRated extends Component{
     constructor(props){
         super(props)
         this.state = {
             topRated: [], //lista mostrada (posiblemente filtrada)
             backup: [], //para hacer comparaciones, sin modificar
-            pagActual: 1,
-            filterText: ""
+            pagActual: 1
         }
     }
 
     componentDidMount(){
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb&language=en-US&page=1')
+        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb&language=en-US&page=${this.state.pagActual"})
         .then( response => response.json() )
         .then( data => this.setState(
-            {topRated: data.results, backup: data.results} //recibe un objeto literal
+            {
+            topRated: data.results, 
+            backup: data.results,
+            pagActual: 1} //recibe un objeto literal
         ))
         .catch( error => console.log(error) )
     }
@@ -33,25 +36,17 @@ class TopRated extends Component{
     }
 
     loadMore(){ 
-        const nuevaPag = this.state.pagActual + 1; //incrementa pagActual
-        //hacemos fetch a esa nueva pagina
-        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb&language=en-US&page=${nuevaPag}`)
+        const nuevaPag = this.state.pagActual + 1; //incrementa pagActual 
+        // //hacemos fetch a esa nueva pagina
+        fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb&page=${nuevaPag"})
         .then(response => response.json())
         .then(data => {
-            this.setState( prevState => {
-                //concatenamos los nuevos resultados con los del estado actual
-                const newBackup = prevState.backup.concat(data.results);
-                //si el filtro esta activo (filterText no vacio), aplicamos el filtro a las nuevas peliculas
-                const newTopRated = prevState.filterText ?
-                newBackup.filter(movie => 
-                    movie.title.toLowerCase().includes(prevState.filterText.toLowerCase())
-                )
-                : newBackup;
-            return{
-                backup: newBackup, 
-                topRated: newTopRated,
-                pagActual: nuevaPag }
-            });
+            console.log("RESULTADOS", data.results)
+            this.setState( 
+                {backup: this.state.backup.concat(data.results), //concatenamos las peliculas que teniamos con de la nueva pagina
+                topRated: this.state.backup.concat(data.results),
+                pagActual: nuevaPag}
+            );
         })
         .catch(err=> console.log(err));
     } 
