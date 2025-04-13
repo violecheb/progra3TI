@@ -1,0 +1,22 @@
+.filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; 
+  }
+  
+  .filtro input {
+    width: 400px;              
+    max-width: 100%;          
+    padding: 10px 15px;       
+    font-size: 16px;           
+    color: #fff;            
+    background-color: #333;   
+    border: 1px solid transparent; 
+    border-radius: 4px;       
+    outline: none;            
+  }
+
+  .filtro input::placeholder {
+    color: #aaa;             
+  }

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./styles.css"
 
 class Filtro extends Component{
     constructor(props){
@@ -19,8 +20,8 @@ class Filtro extends Component{
 
     render(){
         return(
-            <form name="filtro" onSubmit={(event)=> this.manejarSubmit(event)}>
-                <input onChange={(event) => this.controlarInput(event)} value={this.state.valorInput}/>
+            <form name="filtro" className="filtro" onSubmit={(event)=> this.manejarSubmit(event)}>
+                <input placeholder="Filtrar por titulo" onChange={(event) => this.controlarInput(event)} value={this.state.valorInput}/>
             </form>
         )
     }
