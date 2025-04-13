@@ -15,7 +15,7 @@ class TopRated extends Component{
     }
 
     componentDidMount(){
-        fetch(https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb)
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb`)
         .then( response => response.json() )
         .then( data => this.setState(
             {
@@ -38,7 +38,7 @@ class TopRated extends Component{
     loadMore(){ 
         const nuevaPag = this.state.pagActual + 1; //incrementa pagActual 
         // //hacemos fetch a esa nueva pagina
-        fetch(https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb&page=${nuevaPag})
+        fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=16165a70d46ac6b42f11100b26969ebb&page=${nuevaPag}`)
         .then(response => response.json())
         .then(data => {
             console.log("RESULTADOS", data.results)

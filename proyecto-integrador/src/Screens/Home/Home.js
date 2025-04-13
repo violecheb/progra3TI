@@ -1,8 +1,9 @@
 import React, {Component} from "react";
+import SearchForm from "../../Components/SearchForm/SearchForm";
 import MoviesList from "../../Components/MoviesList/MoviesList";
 import Loader from "../../Components/Loader/Loader";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import SearchForm from "../../Components/SearchForm/SearchForm";
+import "./styles.css";
 
 class Home extends Component{
     constructor(props){
@@ -11,6 +12,7 @@ class Home extends Component{
         {topRated: [],
         upcoming: []
         }
+
     }
 
     componentDidMount(){
@@ -34,15 +36,15 @@ class Home extends Component{
 
     render(){
         return(
-            <main>
+            <main className="home">
             {this.state.topRated.length === 0 || this.state.upcoming.length === 0 ? 
             <Loader/> :
             <>
             <SearchForm history={this.props.history}/>
             <MoviesList header= "Top Rated Movies" movies = {this.state.topRated.slice(0, 5)}/>
-            <Link to="/toprated">Ver todas</Link>
+            <Link to="/toprated" className="ver-todas">Ver todas</Link>
             <MoviesList header= "Upcoming Movies" movies = {this.state.upcoming.slice(0, 5)}/>
-            <Link to="/upcoming">Ver todas</Link>
+            <Link to="/upcoming" className="ver-todas">Ver todas</Link>
             </>
             }
             </main>

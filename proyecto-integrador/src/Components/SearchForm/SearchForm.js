@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./styles.css";
 
 class SearchForm extends Component{
     constructor(props){
@@ -24,9 +25,9 @@ class SearchForm extends Component{
         console.log("input", this.state.valorInput)
         console.log("history ", this.props.history)
         return(
-            <form name="buscador" onSubmit={(event)=> this.controlarSubmit(event)}>
-                <input onChange={(event) => this.controlarInput(event)} value={this.state.valorInput}/>
-                <button>Buscar</button>
+            <form name="buscador" className="search-form" onSubmit={(event)=> this.controlarSubmit(event)}>
+                <input placeholder="Buscador" value={this.state.valorInput} onChange={(event) => this.controlarInput(event)}/>
+                <button type="submit">Buscar</button>
             </form>
         )
     }
