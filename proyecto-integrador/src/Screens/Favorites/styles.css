@@ -1,0 +1,21 @@
+.favorites-container {
+    background-color: #141414;       
+    color: #fff;                     
+    min-height: 100vh;             
+    padding: 40px 20px;             
+    box-sizing: border-box;
+  }
+  
+  .favorites-heading {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .favorites-list {
+    display: flex;
+    flex-wrap: wrap;               
+    justify-content: center;         
+    gap: 20px;
+  }

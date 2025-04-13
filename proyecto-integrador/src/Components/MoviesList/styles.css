@@ -1,0 +1,47 @@
+.seccion-movies {
+    padding: 20px;
+    background-color: #000;  
+}
+
+.header-seccion {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;  
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+/*responsive*/
+
+@media (max-width: 768px) {
+    .seccion-movies {
+      padding: 10px;
+    }
+  
+    .header-seccion {
+      font-size: 24px;
+    }
+  
+    .movies-container {
+      gap: 16px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-seccion {
+      font-size: 18px;
+    }
+  
+    .movies-container {
+      padding: 8px;
+      gap: 12px;
+    }
+  }

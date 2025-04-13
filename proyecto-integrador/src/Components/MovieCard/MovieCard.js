@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import "./styles.css";
 
 class MovieCard extends Component{
     constructor(props){
@@ -61,13 +62,17 @@ class MovieCard extends Component{
         this.setState({
             favorito: false
         })
+
+        if(this.props.sacarDeFavs !== undefined){ //si me lo pasaron como prop 
+            this.props.sacarDeFavs(idPelicula)  //le paso el id de las peliculas que debe dejar de mostrar porque fueron desfaveadas
+        }
     }
 
     render(){
        const movie = this.state.valor;
        console.log("movie card recibe:", movie)
        return(
-        <>
+        <div className="movie-card">
         <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt={movie.title}/>
         <h1>{movie.title}</h1>
         {this.state.mostrarContenido === true ? 
@@ -81,7 +86,7 @@ class MovieCard extends Component{
 
         <button onClick={()=> this.favear(movie.id)}>🤍</button>
         }
-        </>
+        </div>
        )
     }
 }

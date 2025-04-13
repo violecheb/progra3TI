@@ -9,6 +9,7 @@ import Footer from "./Components/Footer/Footer";
 import TopRated from "./Screens/TopRated/TopRated";
 import SearchResults from "./Screens/SearchResults/SearchResults";
 import Upcoming from "./Screens/Upcoming/Upcoming";
+import Favorites from "./Screens/Favorites/Favorites";
 // Aca va la importación de los screens cuando los tengamos
 
 
@@ -22,6 +23,7 @@ function App() {
       <Route path="/topRated" component= {TopRated} />
       <Route path="/searchresults/:busqueda" component={SearchResults}/>
       <Route path="/upcoming" component={Upcoming} />
+      <Route path="/favorites" component={Favorites}/>
       <Route component= {Error404} />
     </Switch>
     <Footer />

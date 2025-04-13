@@ -1,8 +1,11 @@
 import React from "react";
+import "./styles.css"
 
 function Loader(){
     return(
-        <p>Cargando...</p>
+        <div className="loader">
+        <img src="/img/loading.gif" alt="cargando..." />
+        </div>
     )
 }
 
