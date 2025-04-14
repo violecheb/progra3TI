@@ -19,12 +19,10 @@ function Header(){
         }
     ]
     return(
-    <header className="fixed-header">
     <nav>
     <Link to="/"><img src="./img/logo.png" className="logo" alt="logo"/></Link>
     <Navbar opciones = {opciones}/>
     </nav>
-    </header>
     )
 }
 

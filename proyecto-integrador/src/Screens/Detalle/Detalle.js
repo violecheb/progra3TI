@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './Detalle.css'
+import './styles.css'
 import Loader from "../../Components/Loader/Loader";
 
 class Detalle extends Component{

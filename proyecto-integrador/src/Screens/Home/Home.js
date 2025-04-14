@@ -36,7 +36,7 @@ class Home extends Component{
 
     render(){
         return(
-            <main className="home">
+            <main className="home main-content">
             {this.state.topRated.length === 0 || this.state.upcoming.length === 0 ? 
             <Loader/> :
             <>
