@@ -1,0 +1,38 @@
+.not-found {
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+  }
+  
+  .not-found h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .not-found p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px; 
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .not-found button {
+    background-color: #e50914; 
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+  }

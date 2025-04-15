@@ -1,0 +1,14 @@
+.search-results {
+    min-height: 100vh;            
+    background-color: #141414;      
+    color: #fff;                   
+    padding: 40px 20px;             
+    box-sizing: border-box;
+  }
+  
+  .search-results h1 {
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+  }
